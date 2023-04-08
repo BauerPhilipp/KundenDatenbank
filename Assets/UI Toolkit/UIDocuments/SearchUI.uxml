@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/USSFiles/Resources/SearchStyle.uss?fileID=7433441132597879392&amp;guid=ac63c2142594d3945a535025710cc0c7&amp;type=3#SearchStyle" />
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-color: rgb(94, 94, 94);">
+        <ui:VisualElement name="Search" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100px;">
+            <ui:Label tabindex="-1" text="Suche" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; font-size: 63px; color: rgb(255, 255, 255); -unity-text-outline-color: rgb(0, 0, 0); text-shadow: 3px 3px 4px rgb(0, 0, 0); -unity-text-outline-width: 0;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="MainContent" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); height: 80%; justify-content: flex-start; align-items: center;">
+            <ui:TextField picking-mode="Ignore" label="Kundenname: " value="Dürnberger" name="SearchText" password="false" style="color: rgb(255, 255, 255); font-size: 27px; -unity-text-align: middle-center; background-color: rgba(0, 0, 0, 0); width: 90%;" />
+            <ui:VisualElement name="SearchResults" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 90%; height: 100%;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

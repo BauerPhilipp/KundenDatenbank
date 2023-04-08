@@ -9,7 +9,7 @@ public class CSVReader : MonoBehaviour
     [SerializeField] TextAsset csvDatei;
     int spaltenAnzahl = 0;
     int reihenAnzahl = 0;
-    List<Kunde> kundenListe = new List<Kunde>();
+    static List<Kunde> kundenListe = new List<Kunde>();
 
     private void Start()
     {
@@ -57,5 +57,11 @@ public class CSVReader : MonoBehaviour
     //                + "Land: " + kunde.Land + ", ");
     //    }
     //}
+
+
+    public static List<Kunde> GetKundenliste()
+    {
+        return kundenListe;
+    }
 
 }

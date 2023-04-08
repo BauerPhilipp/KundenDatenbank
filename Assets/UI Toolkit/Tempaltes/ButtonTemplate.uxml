@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/USSFiles/Resources/SearchStyle.uss?fileID=7433441132597879392&amp;guid=ac63c2142594d3945a535025710cc0c7&amp;type=3#SearchStyle" />
+    <ui:VisualElement name="CustomerButton" class="ButtonTemplate">
+        <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="ButtonLabel" picking-mode="Ignore" class="buttonTemplateLabel" />
+    </ui:VisualElement>
+</ui:UXML>
