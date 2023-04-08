@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/CustomerCvUiUss.uss?fileID=7433441132597879392&amp;guid=b8a145b0e4be90f4698f9cbd963993ff&amp;type=3#CustomerCvUiUss" />
-    <ui:VisualElement name="MainContainer" style="flex-grow: 1; background-color: rgb(108, 105, 105); flex-direction: row;">
+    <ui:VisualElement name="MainContainer" style="flex-grow: 1; background-color: rgb(108, 105, 105); flex-direction: row; visibility: hidden;">
         <ui:VisualElement name="LeftContainer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-basis: 100%; align-items: center; justify-content: center;">
             <ui:Label tabindex="-1" text="Kundendaten:" display-tooltip-when-elided="true" name="Kundendaten" class="Label" />
             <ui:TextField picking-mode="Ignore" label="Kunde" value="filler text" name="Kunde" class="customerCvUi-Textfield" />

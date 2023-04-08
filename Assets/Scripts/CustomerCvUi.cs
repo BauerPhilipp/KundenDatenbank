@@ -12,13 +12,22 @@ public class CustomerCvUi : MonoBehaviour
 
     private void Awake()
     {
-        
+        root = GetComponent<UIDocument>().rootVisualElement;
+        backButton = root.Q<Button>("BackButton");
+        backButton.RegisterCallback<ClickEvent>(BackButtonClicked);
     }
 
 
-    public void SetData()
+    public void SetData(Kunde pickedCustomer)
     {
+        root.Q("MainContainer").visible = true;
+        VisualElement kunde;
         Debug.Log("CustomerUi aktiviert!");
     }
 
+
+    void BackButtonClicked(ClickEvent e)
+    {
+        root.Q("MainContainer").visible = false;
+    }
 }

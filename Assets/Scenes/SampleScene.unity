@@ -508,7 +508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonTemplate: {fileID: 9197481963319205126, guid: 7c1da7a04a83d6b45995b4c805abdb32, type: 3}
-  CustomerUi: {fileID: 1957496619}
+  customerUi: {fileID: 1957496619}
 --- !u!114 &1909689129
 MonoBehaviour:
   m_ObjectHideFlags: 0
