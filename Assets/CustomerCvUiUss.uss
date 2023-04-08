@@ -1,0 +1,37 @@
+.customerCvUi-Textfield {
+    width: 90%;
+    font-size: 26px;
+}
+
+.Button {
+    width: 488px;
+    height: 71px;
+    background-color: rgb(154, 154, 154);
+    font-size: 41px;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    border-left-width: 3px;
+    border-right-width: 3px;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+    border-top-left-radius: 26px;
+    border-bottom-left-radius: 26px;
+    border-top-right-radius: 26px;
+    border-bottom-right-radius: 26px;
+    color: rgb(190, 51, 0);
+    margin-top: 0;
+    top: 387px;
+}
+
+.Label {
+    font-size: 39px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 0 rgb(0, 0, 0);
+    word-spacing: 21px;
+    letter-spacing: 1px;
+    -unity-paragraph-spacing: 7px;
+    -unity-font-style: bold-and-italic;
+    -unity-text-outline-width: 0;
+}

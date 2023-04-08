@@ -8,12 +8,15 @@ using UnityEngine.UIElements;
 public class SearchManager : MonoBehaviour
 {
     [SerializeField] VisualTreeAsset buttonTemplate;
+    [SerializeField] GameObject CustomerUi;
     VisualElement root;
     VisualElement searchResult;
     TextField searchField;
     Label buttonTemplateLabel;
     List<Kunde> kundenliste;
     List<VisualElement> kundenlisteButtons;
+
+    public Kunde pickedCustomer;
 
     const string searchStyle = "SearchStyle";
     const string buttonTemplateLabelClass = "buttonTemplateLabel";
@@ -85,6 +88,9 @@ public class SearchManager : MonoBehaviour
     void OnCustomerClicked(ClickEvent e)
     {
         Debug.Log(((e.target as VisualElement).parent.userData as Kunde).Name);
+        pickedCustomer = (e.target as VisualElement).parent.userData as Kunde;
+        CustomerUi.GetComponent<CustomerCvUi>().SetData();
+        CustomerUi.SetActive(true);
     }
 
 }

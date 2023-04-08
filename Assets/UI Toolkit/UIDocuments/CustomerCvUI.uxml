@@ -1,0 +1,27 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/CustomerCvUiUss.uss?fileID=7433441132597879392&amp;guid=b8a145b0e4be90f4698f9cbd963993ff&amp;type=3#CustomerCvUiUss" />
+    <ui:VisualElement name="MainContainer" style="flex-grow: 1; background-color: rgb(108, 105, 105); flex-direction: row;">
+        <ui:VisualElement name="LeftContainer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-basis: 100%; align-items: center; justify-content: center;">
+            <ui:Label tabindex="-1" text="Kundendaten:" display-tooltip-when-elided="true" name="Kundendaten" class="Label" />
+            <ui:TextField picking-mode="Ignore" label="Kunde" value="filler text" name="Kunde" class="customerCvUi-Textfield" />
+            <ui:TextField picking-mode="Ignore" label="Name" value="filler text" name="Name" class="customerCvUi-Textfield" />
+            <ui:TextField picking-mode="Ignore" label="Firma" value="filler text" name="Firma" class="customerCvUi-Textfield" />
+            <ui:TextField picking-mode="Ignore" label="Strasse" value="filler text" name="Strasse" class="customerCvUi-Textfield" />
+            <ui:TextField picking-mode="Ignore" label="Postleitzahl" value="filler text" name="Postleitzahl" class="customerCvUi-Textfield" />
+            <ui:TextField picking-mode="Ignore" label="Land" value="filler text" name="Land" class="customerCvUi-Textfield" />
+            <ui:Label tabindex="-1" text="Paketdaten:" display-tooltip-when-elided="true" name="Paketdaten" class="Label" style="margin-top: 44px;" />
+            <ui:TextField picking-mode="Ignore" label="Länge" value="filler text" name="Laenge" class="customerCvUi-Textfield" />
+            <ui:TextField picking-mode="Ignore" label="Breite" value="filler text" name="Breite" class="customerCvUi-Textfield" />
+            <ui:TextField picking-mode="Ignore" label="Höhe" value="filler text" name="Hoehe" class="customerCvUi-Textfield" />
+            <ui:TextField picking-mode="Ignore" label="Gewicht" value="filler text" name="Gewicht" class="customerCvUi-Textfield" />
+            <ui:Button text="Back to Menu" display-tooltip-when-elided="true" name="BackButton" class="Button" style="top: 47px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="RightContainer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-basis: 100%; align-items: center; justify-content: center;">
+            <ui:VisualElement style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 700px; height: 550px; align-items: center; justify-content: flex-start; padding-top: 27px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-left-width: 4px; border-right-width: 4px; border-top-width: 4px; border-bottom-width: 4px; border-top-left-radius: 12px; border-bottom-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px;">
+                <ui:Label tabindex="-1" text="Platzhaltertext:&#10;Herr Gerhard Dürnberger&#10;Kaindl....&#10;Oberst......str. ...&#10;xxx Salzburg&#10;Austria" display-tooltip-when-elided="true" name="Label" binding-path=".Custom" class="Label" style="width: 70%; height: 400px;">
+                    <ui:Button text="Copy to Clipboard" display-tooltip-when-elided="true" name="Button" class="Button" />
+                </ui:Label>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
