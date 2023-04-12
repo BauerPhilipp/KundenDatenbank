@@ -10,6 +10,8 @@ public class CustomerCvUi : MonoBehaviour
     Button backButton;
     Button copyButton;
     TextField kunde;
+    RadioButtonGroup titleRadioButtonGroup;
+    string title = "Herr";
     TextField kundenName;
     TextField firma;
     TextField strasse;
@@ -39,6 +41,7 @@ public class CustomerCvUi : MonoBehaviour
         etikettInhaltText = root.Q<Label>("EtikettInhaltText");
         etikettAbmasseText = root.Q<Label>("EtikettAbmasseText");
 
+        titleRadioButtonGroup = root.Q<RadioButtonGroup>("RadioButtonGroup"); titleRadioButtonGroup.RegisterCallback<ChangeEvent<int>>(OnTitleChanged);
         kunde = root.Q<TextField>("Kunde"); kunde.RegisterCallback<ChangeEvent<string>>(UpdateEtikettText);
         kundenName = root.Q<TextField>("Name"); kundenName.RegisterCallback<ChangeEvent<string>>(UpdateEtikettText);
         firma = root.Q<TextField>("Firma"); firma.RegisterCallback<ChangeEvent<string>>(UpdateEtikettText);
@@ -79,12 +82,30 @@ public class CustomerCvUi : MonoBehaviour
 
     void OnCopyClicked(ClickEvent e)
     {
-        string finalResult = $"Empf‰nger:\n      {kundenName.value}\n" +
+        string finalResult = $"Empf‰nger:\n     {title} {kundenName.value}\n" +
             $"      {firma.value}\n      {strasse.value}\n      {postleitzahl.value}\n      {land.value}\n\nInhalt:\n" +
             $"      {inhalt.value}\n\nAbmaﬂe:\n      {laenge.value} x {breite.value} x {hoehe.value} - Gewicht: {gewicht.value}kg\n\n" +
             $"Kontierung:\n      810051";
 
         GUIUtility.systemCopyBuffer = finalResult;
+
+    }
+
+    void OnTitleChanged(ChangeEvent<int> e)
+    {
+        int pickedValue = (e.target as RadioButtonGroup).value;
+
+        switch (pickedValue)
+        {
+            case 0:
+                title = "Herr";
+                break;
+            case 1:
+                title = "Frau";
+                break;
+        }
+        UpdateText();
+        Debug.Log(title);
 
     }
 
@@ -95,7 +116,7 @@ public class CustomerCvUi : MonoBehaviour
 
     void UpdateText()
     {
-        etikettEmpfaengerText.text = $"Herr {kundenName.value}\n{firma.value}\n{strasse.value}\n{postleitzahl.value}\n{land.value}";
+        etikettEmpfaengerText.text = $"{title} {kundenName.value}\n{firma.value}\n{strasse.value}\n{postleitzahl.value}\n{land.value}";
         etikettInhaltText.text = "" + inhalt.value;
         etikettAbmasseText.text = $"{laenge.value} x {breite.value} x {hoehe.value} - Gewicht: {gewicht.value}kg"; 
     }

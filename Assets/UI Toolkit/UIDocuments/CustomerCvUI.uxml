@@ -5,6 +5,7 @@
             <ui:VisualElement name="LeftContainer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-basis: 100%; align-items: center; justify-content: flex-start; height: 850px;">
                 <ui:Label tabindex="-1" text="Kundendaten:" display-tooltip-when-elided="true" name="Kundendaten" class="Label" />
                 <ui:TextField picking-mode="Ignore" label="Kunde" value="filler text" name="Kunde" class="customerCvUi-Textfield" />
+                <ui:RadioButtonGroup label="Anrede" value="0" choices="Herr,Frau" name="RadioButtonGroup" style="-unity-font-style: normal; font-size: 26px;" />
                 <ui:TextField picking-mode="Ignore" label="Name" value="filler text" name="Name" class="customerCvUi-Textfield" />
                 <ui:TextField picking-mode="Ignore" label="Firma" value="filler text" name="Firma" class="customerCvUi-Textfield" />
                 <ui:TextField picking-mode="Ignore" label="Strasse" value="filler text" name="Strasse" class="customerCvUi-Textfield" />

@@ -39,3 +39,11 @@
 .unity-text-element--inner-input-field-component {
     -unity-font-style: bold-and-italic;
 }
+
+.Button:hover {
+    background-color: rgb(118, 124, 168);
+}
+
+.unity-radio-button-group__container {
+    flex-direction: row;
+}
