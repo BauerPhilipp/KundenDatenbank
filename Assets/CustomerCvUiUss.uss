@@ -22,7 +22,7 @@
     border-bottom-right-radius: 26px;
     color: rgb(190, 51, 0);
     margin-top: 0;
-    top: 387px;
+    top: auto;
 }
 
 .Label {
@@ -34,4 +34,8 @@
     -unity-paragraph-spacing: 7px;
     -unity-font-style: bold-and-italic;
     -unity-text-outline-width: 0;
+}
+
+.unity-text-element--inner-input-field-component {
+    -unity-font-style: bold-and-italic;
 }

@@ -65,11 +65,11 @@ public class SearchManager : MonoBehaviour
         foreach (VisualElement button in kundenlisteButtons)
         {
             Label label = button.Q<Label>("ButtonLabel");
-            label.text = "Kunde: " + (button.userData as Kunde).Kundenbezeichnung + ";  Name: " + (button.userData as Kunde).Name;
+            label.text =   "Name: " + (button.userData as Kunde).Name;
             label.pickingMode = PickingMode.Ignore;
             searchResult.Add(button);
         }
-        Debug.Log("kundenlisteButtons count = " + kundenlisteButtons.Count);
+        //Debug.Log("kundenlisteButtons count = " + kundenlisteButtons.Count);
     }
 
     void RemoveButtonsFromView()
