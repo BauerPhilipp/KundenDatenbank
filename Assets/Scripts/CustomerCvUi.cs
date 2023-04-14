@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class CustomerCvUi : MonoBehaviour
 {
-
+    Kunde pickedCustomer;
     VisualElement root;
     Button backButton;
     Button copyButton;
@@ -59,6 +59,7 @@ public class CustomerCvUi : MonoBehaviour
 
     public void SetData(Kunde pickedCustomer)
     {
+        this.pickedCustomer = pickedCustomer;
         root.Q("MainContainer").visible = true;
         kunde.value = pickedCustomer.Kundenbezeichnung;
         kundenName.value = pickedCustomer.Name;
@@ -82,12 +83,13 @@ public class CustomerCvUi : MonoBehaviour
 
     void OnCopyClicked(ClickEvent e)
     {
-        string finalResult = $"Empf‰nger:\n     {title} {kundenName.value}\n" +
+        string name = FindObjectOfType<ResponsibilityManager>().GetResponsiblePerson(pickedCustomer);
+        string finalResult = $"Empf‰nger:\n      {title} {kundenName.value}\n" +
             $"      {firma.value}\n      {strasse.value}\n      {postleitzahl.value}\n      {land.value}\n\nInhalt:\n" +
             $"      {inhalt.value}\n\nAbmaﬂe:\n      {laenge.value} x {breite.value} x {hoehe.value} - Gewicht: {gewicht.value}kg\n\n" +
             $"Kontierung:\n      810051";
 
-        GUIUtility.systemCopyBuffer = finalResult;
+        GUIUtility.systemCopyBuffer = "Hallo " + name + ",\n\nwir haben wieder x Pakete beim Empfang/Magazin deponiert.\n\n" + finalResult;
 
     }
 
