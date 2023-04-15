@@ -1,6 +1,8 @@
 .customerCvUi-Textfield {
     width: 90%;
     font-size: 26px;
+    -unity-text-align: middle-right;
+    padding-top: 0;
 }
 
 .Button {
@@ -38,6 +40,8 @@
 
 .unity-text-element--inner-input-field-component {
     -unity-font-style: bold-and-italic;
+    -unity-text-align: upper-left;
+    padding-left: 11px;
 }
 
 .Button:hover {
