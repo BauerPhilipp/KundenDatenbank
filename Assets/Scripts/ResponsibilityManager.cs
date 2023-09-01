@@ -13,9 +13,9 @@ public class ResponsibilityManager : MonoBehaviour
         persons.Add(DS);
         ResponsiblePerson VF = new ResponsiblePerson("Vera", new List<string> { "Japan"});
         persons.Add(VF);
-        ResponsiblePerson MB = new ResponsiblePerson("Margit", new List<string> { "Deutschland", "Switzerland",  });
+        ResponsiblePerson MB = new ResponsiblePerson("Margit", new List<string> { "Deutschland", "Switzerland", "Texas 78633", "Vermont 05446 USA" }) ;
         persons.Add(MB);
-        ResponsiblePerson AB = new ResponsiblePerson("Alma", new List<string> { "Malaysia", "China", });
+        ResponsiblePerson AB = new ResponsiblePerson("Alma", new List<string> { "Malaysia", "China" });
         persons.Add(AB);
     }
 
