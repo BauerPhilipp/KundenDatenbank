@@ -9,6 +9,7 @@ public class CustomerCvUi : MonoBehaviour
     VisualElement root;
     Button backButton;
     Button copyButton;
+    Button anschreiben;
     TextField kunde;
     RadioButtonGroup titleRadioButtonGroup;
     string title = "Herr";
@@ -53,6 +54,7 @@ public class CustomerCvUi : MonoBehaviour
         breite = root.Q<TextField>("Breite"); breite.RegisterCallback<ChangeEvent<string>>(UpdateEtikettText);
         hoehe = root.Q<TextField>("Hoehe"); hoehe.RegisterCallback<ChangeEvent<string>>(UpdateEtikettText);
         gewicht = root.Q<TextField>("Gewicht"); gewicht.RegisterCallback<ChangeEvent<string>>(UpdateEtikettText);
+        anschreiben = root.Q<Button>("Anschreiben"); anschreiben.RegisterCallback<ClickEvent>(OnEggerWarningClicked);
         root.Q("MainContainer").visible = false;
     }
 
@@ -73,12 +75,15 @@ public class CustomerCvUi : MonoBehaviour
         hoehe.value = "" + 2;
         gewicht.value = "" + 10;
 
+        CheckEggerWarning();
+
         UpdateText();
     }
 
     void BackButtonClicked(ClickEvent e)
     {
         root.Q("MainContainer").visible = false;
+        anschreiben.visible = false;
     }
 
     void OnCopyClicked(ClickEvent e)
@@ -121,6 +126,36 @@ public class CustomerCvUi : MonoBehaviour
         etikettEmpfaengerText.text = $"{title} {kundenName.value}\n{firma.value}\n{strasse.value}\n{postleitzahl.value}\n{land.value}";
         etikettInhaltText.text = "" + inhalt.value;
         etikettAbmasseText.text = $"{laenge.value} x {breite.value} x {hoehe.value} - Gewicht: {gewicht.value}kg"; 
+    }
+
+    void CheckEggerWarning()
+    {
+        if (pickedCustomer.Kundenbezeichnung == "Egger")
+        {
+            anschreiben.visible = true;
+        }
+        else
+        {
+            anschreiben.visible = false;
+        }
+    }
+
+    void OnEggerWarningClicked(ClickEvent e)
+    {
+        try
+        {
+            System.Diagnostics.Process.Start("https://berndorfband.sharepoint.com/:w:/r/sites/BB365_Strukturentwicklungen/Freigegebene%20Dokumente/Begleitschreiben%20Musterversand/Anschreiben%20Versand%20Egger.docx?d=w202acbd497d64a609e8c8dc13c3c875a&csf=1&web=1&e=SARyhK");
+        }
+        catch
+        {
+            anschreiben.text = "Internet nicht verfügbar";
+        }
+
+        string schriftkopf = $"{kundenName.value}\n{firma.value}\n{strasse.value}\n{postleitzahl.value}\n{land.value}";
+
+
+        GUIUtility.systemCopyBuffer = schriftkopf;
+
     }
 
 }
